@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		D02E796228E9FE09002A7609 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02E796128E9FE09002A7609 /* AppDelegate.swift */; };
 		D02E796428E9FE09002A7609 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02E796328E9FE09002A7609 /* SceneDelegate.swift */; };
-		D02E796628E9FE09002A7609 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02E796528E9FE09002A7609 /* ViewController.swift */; };
-		D02E796928E9FE09002A7609 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02E796728E9FE09002A7609 /* Main.storyboard */; };
+		D02E796628E9FE09002A7609 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02E796528E9FE09002A7609 /* HomeViewController.swift */; };
 		D02E796B28E9FE0C002A7609 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02E796A28E9FE0C002A7609 /* Assets.xcassets */; };
 		D02E796E28E9FE0C002A7609 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02E796C28E9FE0C002A7609 /* LaunchScreen.storyboard */; };
+		D02E799828EAEBFD002A7609 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02E799728EAEBFD002A7609 /* HomeViewModel.swift */; };
+		D096A89828FF23D300A665FE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096A89728FF23D300A665FE /* Coordinator.swift */; };
+		D096A89A28FF240600A665FE /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096A89928FF240600A665FE /* Assembly.swift */; };
+		D096A89C28FF256C00A665FE /* HomeIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096A89B28FF256C00A665FE /* HomeIO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D02E795E28E9FE09002A7609 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02E796128E9FE09002A7609 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D02E796328E9FE09002A7609 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D02E796528E9FE09002A7609 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D02E796828E9FE09002A7609 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D02E796528E9FE09002A7609 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D02E796A28E9FE0C002A7609 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D02E796D28E9FE0C002A7609 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D02E796F28E9FE0C002A7609 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D02E799728EAEBFD002A7609 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		D096A89728FF23D300A665FE /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		D096A89928FF240600A665FE /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
+		D096A89B28FF256C00A665FE /* HomeIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +64,32 @@
 			children = (
 				D02E796128E9FE09002A7609 /* AppDelegate.swift */,
 				D02E796328E9FE09002A7609 /* SceneDelegate.swift */,
-				D02E796528E9FE09002A7609 /* ViewController.swift */,
-				D02E796728E9FE09002A7609 /* Main.storyboard */,
+				D096A89928FF240600A665FE /* Assembly.swift */,
+				D096A89728FF23D300A665FE /* Coordinator.swift */,
+				D02E799528EAEBB1002A7609 /* Module */,
 				D02E796A28E9FE0C002A7609 /* Assets.xcassets */,
 				D02E796C28E9FE0C002A7609 /* LaunchScreen.storyboard */,
 				D02E796F28E9FE0C002A7609 /* Info.plist */,
 			);
 			path = MovieApp;
+			sourceTree = "<group>";
+		};
+		D02E799528EAEBB1002A7609 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				D02E799628EAEBD2002A7609 /* Home */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		D02E799628EAEBD2002A7609 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D02E796528E9FE09002A7609 /* HomeViewController.swift */,
+				D096A89B28FF256C00A665FE /* HomeIO.swift */,
+				D02E799728EAEBFD002A7609 /* HomeViewModel.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +152,6 @@
 			files = (
 				D02E796E28E9FE0C002A7609 /* LaunchScreen.storyboard in Resources */,
 				D02E796B28E9FE0C002A7609 /* Assets.xcassets in Resources */,
-				D02E796928E9FE09002A7609 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +162,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D02E796628E9FE09002A7609 /* ViewController.swift in Sources */,
+				D02E796628E9FE09002A7609 /* HomeViewController.swift in Sources */,
+				D096A89C28FF256C00A665FE /* HomeIO.swift in Sources */,
+				D096A89A28FF240600A665FE /* Assembly.swift in Sources */,
 				D02E796228E9FE09002A7609 /* AppDelegate.swift in Sources */,
+				D096A89828FF23D300A665FE /* Coordinator.swift in Sources */,
 				D02E796428E9FE09002A7609 /* SceneDelegate.swift in Sources */,
+				D02E799828EAEBFD002A7609 /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D02E796728E9FE09002A7609 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D02E796828E9FE09002A7609 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D02E796C28E9FE0C002A7609 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -290,11 +310,8 @@
 				DEVELOPMENT_TEAM = 2S52Q5VDX5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MovieApp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Movie App";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -324,11 +341,8 @@
 				DEVELOPMENT_TEAM = 2S52Q5VDX5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MovieApp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Movie App";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

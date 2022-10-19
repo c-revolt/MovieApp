@@ -17,6 +17,7 @@ class HomeViewController: UIViewController {
 
     private let viewModel: HomeViewModelProtocol
     
+    
     init(viewModel: HomeViewModelProtocol) {
         self.viewModel = viewModel
         
@@ -31,9 +32,38 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .green
+        view.backgroundColor = #colorLiteral(red: 0.232907176, green: 0.2107973099, blue: 0.2698917389, alpha: 1)
+        
+        setupNavBar()
     }
     
+    
+    
+    fileprivate func setupNavBar() {
+       
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        
+        
+        let logoContainer = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+        imageView.contentMode = .scaleAspectFit
+        let image = UIImage(named: "mainLogo")
+        imageView.image = image
+        logoContainer.addSubview(imageView)
+
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: logoContainer)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search,
+                                                            target: self,
+                                                            action: nil)
+        navigationItem.rightBarButtonItem?.tintColor = .white
+        
+        
+    }
+
 
 }
 
